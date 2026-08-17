@@ -1,18 +1,16 @@
-numbers = [5, 8, 12, 5, 8, 20, 12, 5, 8, 20, 12, 20]
-frequency = {}
-highest_frequency = None
-most_frequent = None
+numbers = [2, 4, 5, 7, 9, 11, 15]
+target = 16
 
-for i in range(len(numbers)):
-        if numbers[i] not in frequency:
-            frequency[numbers[i]] = 1
-        else:
-            frequency[numbers[i]] += 1
+left = 0
+right = 0
 
-for key, values in frequency.items():
-    if highest_frequency is None or values > highest_frequency:
-        highest_frequency = values
-        most_frequent = key
+while left < right:
+    total = numbers[left] + numbers[right]
 
-print("Element:", most_frequent)
-print("Frequency:", highest_frequency)
+    if total > target:
+        right -= 1
+    elif total < target:
+        left += 1
+    else:
+        print(f"Pair: {(numbers[left], numbers[right])}")
+        break
