@@ -1,16 +1,18 @@
-numbers = [2, 4, 5, 7, 9, 11, 15]
-target = 16
+numbers = [2, 5, 1, 8, 2, 9, 3]
+k = 3
 
-left = 0
-right = 0
+window_sum = 0
 
-while left < right:
-    total = numbers[left] + numbers[right]
+for i in range(k):
+    window_sum += numbers[i]
 
-    if total > target:
-        right -= 1
-    elif total < target:
-        left += 1
-    else:
-        print(f"Pair: {(numbers[left], numbers[right])}")
-        break
+largest = window_sum
+
+for i in range(k, len(numbers)):
+    window_sum += numbers[i]
+    window_sum -= numbers[i - k]
+
+    if window_sum > largest:
+        largest = window_sum
+
+print("Maximum Sum:", largest)
