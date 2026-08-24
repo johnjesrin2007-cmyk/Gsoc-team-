@@ -1,22 +1,24 @@
-numbers = [1, 12, -5, -6, 50, 3]
-k = 4
+def is_valid(s):
+    stack=[]
 
+    for char in s:
+        if char in "abc":
+            stack.append(char)
 
-window_sum=0
+        else:
 
-for i in range(k):
-    window_sum+=numbers[i]
+            if not stack:
+                return False
 
-max_sum=window_sum
+            top=stack.pop()
 
-for i in range(k,len(numbers)):
-    window_sum+=numbers[i]
-    window_sum-=numbers[i-k]
+            if char==")" and top!="(":
+                return False
+            if char=="]" and top!="[":
+                return False
+            if char=="}" and top!="{":
+                return False
+    return len(stack)==0
 
-   
-
-    if window_sum>max_sum:
-        max_sum=window_sum
-
-average=max_sum/k
-print(average)
+s="{[()]}"
+print(is_valid(s))
