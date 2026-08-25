@@ -1,10 +1,10 @@
-numbers = [3, 8, 12, 4, 7]
-target = 11
-seen=set()
-for num in numbers:
-    required=target-num
+word = "mississippi"
+frequency={}
 
-    if required in seen:
-        print(required,num)
+for l in word:
+    if l not in frequency:
+        frequency[l]=1
+    else:
+        frequency[l]+=1
 
-    seen.add(num)
+print(frequency)
