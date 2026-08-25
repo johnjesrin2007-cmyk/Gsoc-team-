@@ -1,8 +1,10 @@
-numbers1 = [1, 2, 3, 4, 5]
-numbers2 = [3, 5, 7, 9]
+numbers = [3, 8, 12, 4, 7]
+target = 11
+seen=set()
+for num in numbers:
+    required=target-num
 
-seen = set(numbers1)
+    if required in seen:
+        print(required,num)
 
-for num in numbers2:
-    if num in seen:
-        print(num)
+    seen.add(num)
