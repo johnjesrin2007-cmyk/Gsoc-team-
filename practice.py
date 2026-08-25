@@ -1,24 +1,8 @@
-def is_valid(s):
-    stack=[]
+numbers1 = [1, 2, 3, 4, 5]
+numbers2 = [3, 5, 7, 9]
 
-    for char in s:
-        if char in "abc":
-            stack.append(char)
+seen = set(numbers1)
 
-        else:
-
-            if not stack:
-                return False
-
-            top=stack.pop()
-
-            if char==")" and top!="(":
-                return False
-            if char=="]" and top!="[":
-                return False
-            if char=="}" and top!="{":
-                return False
-    return len(stack)==0
-
-s="{[()]}"
-print(is_valid(s))
+for num in numbers2:
+    if num in seen:
+        print(num)
