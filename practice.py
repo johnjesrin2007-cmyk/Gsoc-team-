@@ -1,10 +1,13 @@
-word = "mississippi"
-frequency={}
+numbers = [4, 2, 7, 1, 6, 3]
+prefix=[]
+total=0
 
-for l in word:
-    if l not in frequency:
-        frequency[l]=1
-    else:
-        frequency[l]+=1
+for num in numbers:
+    total+=num
+    prefix.append(total)
 
-print(frequency)
+print(prefix)
+
+summ=prefix[5]-prefix[1]
+
+print(summ)
