@@ -1,13 +1,16 @@
-numbers = [4, 2, 7, 1, 6, 3]
-prefix=[]
-total=0
+numbers = [2, 5, 8, 12, 18, 21, 27, 31, 40]
+target = 18
 
-for num in numbers:
-    total+=num
-    prefix.append(total)
+left=0
+right=len(numbers)-1
 
-print(prefix)
+while left<=right:
+    mid= (left+right)//2
 
-summ=prefix[5]-prefix[1]
-
-print(summ)
+    if numbers[mid]==target:
+        print(mid)
+        break
+    elif numbers[mid]<target:
+        left=mid+1
+    else:
+        right=mid-1
