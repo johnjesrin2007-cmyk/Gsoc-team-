@@ -12,10 +12,9 @@ while left <= right:
        first_occurance=mid
        right=mid-1
     elif numbers[mid] < target:
-        left = mid + 1
-
+       left = mid + 1
     else:
-        right = mid - 1
+       right = mid - 1
 
 
 
@@ -35,6 +34,6 @@ while left<=right:
         right=mid-1
 
 count=last_occurance-first_occurance+1
-print(f"How many times {target} appears is: {count}")
+print(f"How many times {target} appears is: {count}") 
 
 
