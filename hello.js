@@ -1,9 +1,5 @@
-const student = {
-    name: "John",
-    age: 18,
-    course: "Robotics"
-}
+const numbers = [10, 20, 30]
 
-const {name,course}= student
+const newNumber= [...numbers,40]
 
-console.log(name,course)
+console.log(newNumber)
