@@ -1,7 +1,9 @@
-const numbers = [10, 20, 30, 40, 50]
+const students = [
+    {name: "John", age: 18},
+    {name: "Alex", age: 19},
+    {name: "Sam", age: 18}
+]
 
-const multiplied = numbers.filter((number)=>{
-    return number > 20
+students.map((student)=>{
+    console.log(student.age)
 })
-
-console.log(multiplied)
