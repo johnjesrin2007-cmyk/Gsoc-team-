@@ -1,9 +1,9 @@
-const students = [
-    {name: "John", age: 18},
-    {name: "Alex", age: 19},
-    {name: "Sam", age: 18}
-]
+const student = {
+    name: "John",
+    age: 18,
+    course: "Robotics"
+}
 
-students.map((student)=>{
-    console.log(student.age)
-})
+const {name,course}= student
+
+console.log(name,course)
