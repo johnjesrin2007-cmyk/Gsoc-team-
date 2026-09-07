@@ -1,5 +1,5 @@
-const numbers = [10, 20, 30]
+const numbers = [5, 10, 15, 20]
 
-const newNumber= [...numbers,40]
-
-console.log(newNumber)
+numbers.forEach((number) => {
+    console.log(number)
+})
