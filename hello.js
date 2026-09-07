@@ -1,9 +1,7 @@
-const student = {
-    name:"John",
-    age:18,
-    course:"Robotics and automation",
-    college:"Kgisl"
-}
+const numbers = [10, 20, 30, 40, 50]
 
-console.log(student.name)
-console.log(student["age"])
+const multiplied = numbers.map((number)=>{
+    return number*3
+})
+
+console.log(multiplied)
