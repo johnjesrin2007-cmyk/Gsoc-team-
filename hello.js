@@ -1,10 +1,10 @@
-let name="John"
 let age=18
-let course="JavaScript"
-const college="KGISL"
 
 
-console.log(name)
-console.log(age)
-console.log(course)
-console.log(college)
+if (age>=18) {
+    console.log("You can vote")
+}
+else {
+    console.log("You cannot vote")
+}
+
