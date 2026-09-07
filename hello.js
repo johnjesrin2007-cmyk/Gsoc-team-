@@ -1,5 +1,6 @@
-const add = (a,b) =>{
-     console.log(a+b)
-}
+let numbers=[10, 20, 30, 40, 50]
 
-add(10,20)
+console.log(numbers[0])
+console.log(numbers[4])
+numbers.push(60)
+console.log(numbers)
