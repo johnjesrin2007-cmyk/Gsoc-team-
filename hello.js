@@ -1,6 +1,9 @@
-let numbers=[10, 20, 30, 40, 50]
+const student = {
+    name:"John",
+    age:18,
+    course:"Robotics and automation",
+    college:"Kgisl"
+}
 
-console.log(numbers[0])
-console.log(numbers[4])
-numbers.push(60)
-console.log(numbers)
+console.log(student.name)
+console.log(student["age"])
